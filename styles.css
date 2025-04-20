@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 960px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ff6f61;
+}
+
+.main {
+    color: #ffffff;
+}
+
+.game-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 200px;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.character-img {
+        width: 100%;
+    max-width: 512px;
+    height: auto;
+    max-height: 768px;
+    border-radius: 10px;
+    background-color: #333;
+    object-fit: contain;
+}
+
+.dice {
+    padding-left: 10px;
+    font-size: 1rem;
+    color: #ebc2be;
+}
+
+.dice-result {
+    display: flex;
+    justify-content: space-between; /* Align content to the right */
+    text-align: left;
+    margin-top: 5px;
+    width: 270px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 5px;
+    padding-right: 10px; /* Add some padding for spacing */
+}
+
+.dice-result-img {
+    width: 96px; /* Adjust size as needed */
+    
+    object-fit: contain;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff3b2f;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+.turnConuter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6f61;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

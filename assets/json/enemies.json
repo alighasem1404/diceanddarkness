@@ -1,0 +1,54 @@
+[
+  {
+      "id": 1,
+      "name": "Wolf",
+      "health": 10,
+      "max_health": 10,
+      "type": "beast",
+      "d6_actions": {
+          "1": { "name": "Snap", "type": "aggressive", "damage": 1, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "2": { "name": "Snap", "type": "aggressive", "damage": 1, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "3": { "name": "Howl", "type": "support", "damage": 0, "effect_name": "fear", "effect_chance": 0.2, "effect_duration": 1, "effect_value": null, "effect_damage": 0 },
+          "4": { "name": "Bite", "type": "aggressive", "damage": 1, "effect_name": "bleed", "effect_chance": 0.3, "effect_duration": 2, "effect_value": null, "effect_damage": 1 },
+          "5": { "name": "Lunge", "type": "aggressive", "damage": 3, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "6": { "name": "Frenzy", "type": "aggressive", "damage": 4, "effect_name": "knockdown", "effect_chance": 1.0, "effect_duration": 1, "effect_value": null, "effect_damage": 0 }
+      },
+      "defense": { "armor": 1, "dodge_chance": 0.1 }
+  },
+  {
+      "id": 2,
+      "name": "Goblin",
+      "type": "humanoid",
+      "health": 9,
+      "max_health": 9,
+      "d6_actions": {
+          "1": { "name": "Poke", "type": "aggressive", "damage": 1, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "2": { "name": "Poke", "type": "aggressive", "damage": 1, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "3": { "name": "Dodge", "type": "support", "damage": 0, "effect_name": "gain_dodge", "effect_chance": 0.3, "effect_duration": 1, "effect_value": 0.3, "effect_damage": 0 },
+          "4": { "name": "Dirty Strike", "type": "aggressive", "damage": 1, "effect_name": "poison", "effect_chance": 0.3, "effect_duration": 2, "effect_value": null, "effect_damage": 1 },
+          "5": { "name": "Axe Swing", "type": "aggressive", "damage": 3, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "6": { "name": "Backstab", "type": "aggressive", "damage": 4, "effect_name": "armor_pierce", "effect_chance": 1.0, "effect_duration": null, "effect_value": null, "effect_damage": 0 }
+      },
+      "defense": { "armor": 2, "dodge_chance": 0.15 },
+      "experience": 15,
+      "loot_table": [4, 5, 6]
+  },
+  {
+      "id": 3,
+      "name": "Snake",
+      "type": "beast",
+      "health": 8,
+      "max_health": 8,
+      "d6_actions": {
+          "1": { "name": "Nip", "type": "aggressive", "damage": 1, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "2": { "name": "Nip", "type": "aggressive", "damage": 1, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "3": { "name": "Coil", "type": "support", "damage": 0, "effect_name": "dodge_bonus", "effect_chance": 1.0, "effect_duration": 1, "effect_value": 0.3, "effect_damage": 0 },
+          "4": { "name": "Venom Bite", "type": "aggressive", "damage": 1, "effect_name": "poison", "effect_chance": 0.4, "effect_duration": 2, "effect_value": null, "effect_damage": 1 },
+          "5": { "name": "Strike", "type": "aggressive", "damage": 3, "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+          "6": { "name": "Deadly Bite", "type": "aggressive", "damage": 4, "effect_name": "poison", "effect_chance": 1.0, "effect_duration": 2, "effect_value": null, "effect_damage": 2 }
+      },
+      "defense": { "armor": 0, "dodge_chance": 0.25 },
+      "experience": 12,
+      "loot_table": [7, 8]
+  }
+]

@@ -1,0 +1,102 @@
+
+[
+  {
+      "name": "Slash",
+      "type": "physical",
+      "damage": 2,
+      "damage_type": "slashing",
+      "effect_name": null,
+      "effect_chance": null,
+      "effect_duration": null,
+      "effect_value": null,
+      "effect_damage": 0
+  },
+  {
+      "name": "Quick Strike",
+      "type": "physical",
+      "damage": 1,
+      "damage_type": "slashing",
+      "effect_name": "gain_dodge",
+      "effect_chance": 1.0,
+      "effect_duration": 1,
+      "effect_value": 0.2,
+      "effect_damage": 0
+  },
+  {
+      "name": "Power Attack",
+      "type": "physical",
+      "damage": 4,
+      "damage_type": "bludgeoning",
+      "effect_name": null,
+      "effect_chance": null,
+      "effect_duration": null,
+      "effect_value": null,
+      "effect_damage": 0
+  },
+  {
+      "name": "Heal",
+      "type": "support",
+      "damage": 0,
+      "damage_type": null,
+      "effect_name": "restore_health",
+      "effect_chance": 1.0,
+      "effect_duration": null,
+      "effect_value": 5,
+      "effect_damage": 0
+  },
+  {
+      "name": "Critical Strike",
+      "type": "physical",
+      "damage": 6,
+      "damage_type": "piercing",
+      "effect_name": "armor_pierce",
+      "effect_chance": 1.0,
+      "effect_duration": null,
+      "effect_value": null,
+      "effect_damage": 0
+  },
+  {
+      "name": "Fireball",
+      "type": "magic",
+      "damage": 5,
+      "damage_type": "fire",
+      "effect_name": "burn",
+      "effect_chance": 1.0,
+      "effect_duration": 2,
+      "effect_value": null,
+      "effect_damage": 2
+  },
+  {
+      "name": "Ice Shard",
+      "type": "magic",
+      "damage": 3,
+      "damage_type": "cold",
+      "effect_name": "slow",
+      "effect_chance": 1.0,
+      "effect_duration": 1,
+      "effect_value": null,
+      "effect_damage": 0
+  },
+  {
+      "name": "Berserk",
+      "type": "physical",
+      "damage": 3,
+      "damage_type": "slashing",
+      "effect_name": "increase_damage",
+      "effect_chance": 1.0,
+      "effect_duration": 1,
+      "effect_value": 1.5,
+      "effect_damage": 0
+  },
+  {
+      "name": "Lightning Strike",
+      "type": "magic",
+      "damage": 4,
+      "damage_type": "lightning",
+      "effect_name": "stun",
+      "effect_chance": 1.0,
+      "effect_duration": 1,
+      "effect_value": null,
+      "effect_damage": 0
+  }
+]
