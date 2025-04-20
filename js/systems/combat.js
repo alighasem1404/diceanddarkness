@@ -111,13 +111,13 @@ document.getElementById("roll-button").addEventListener("click", () => {
     // Update the dice text and abilities for player and enemy
     document.getElementById("player-dice").innerHTML = 
         `${playerAbility.name} ` + `<br>` +
-        `Damage: ${playerAbility.damage}, ` + `<br>` +
-        `Effect:`+ `<br>` + `${formatEffect(playerAbility.effect)}`;
-    
+        `${playerAbility.damage} ${playerAbility.damage_type} damage` + `<br>` +
+        `${formatEffect(playerAbility.effect_name)}`;
+
     document.getElementById("enemy-dice").innerHTML = 
-        `${enemyAbility.name} ` + `<br>` +
-        `Damage: ${enemyAbility.damage}, ` + `<br>` +
-        `Effect:`+ `<br>` + `${formatEffect(enemyAbility.effect)}`;
+        `${enemyAbility.name}` + `<br>` +
+        `${enemyAbility.damage} ${enemyAbility.damage_type} damage` + `<br>` +
+        `${formatEffect(enemyAbility.effect_name)}`;
 });
 
 // Load character data on page load
