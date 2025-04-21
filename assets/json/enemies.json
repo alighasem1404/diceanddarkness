@@ -1,19 +1,54 @@
 [
-  {
-      "id": 1,
-      "name": "Wolf",
-      "health": 10,
-      "max_health": 10,
-      "type": "beast",
-      "d6_actions": {
-          "1": { "name": "Snap", "type": "aggressive", "damage": 1, "damage_type": "piercing", "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
-          "2": { "name": "Snap", "type": "aggressive", "damage": 1, "damage_type": "piercing", "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
-          "3": { "name": "Howl", "type": "support", "damage": 0, "damage_type": "none", "effect_name": "fear", "effect_chance": 0.2, "effect_duration": 1, "effect_value": null, "effect_damage": 0 },
-          "4": { "name": "Bite", "type": "aggressive", "damage": 1, "damage_type": "piercing", "effect_name": "bleed", "effect_chance": 0.3, "effect_duration": 2, "effect_value": null, "effect_damage": 1 },
-          "5": { "name": "Lunge", "type": "aggressive", "damage": 3, "damage_type": "piercing", "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
-          "6": { "name": "Frenzy", "type": "aggressive", "damage": 4, "damage_type": "slashing", "effect_name": "knockdown", "effect_chance": 1.0, "effect_duration": 1, "effect_value": null, "effect_damage": 0 }
-      },
-      "defense": { "armor": 1, "dodge_chance": 0.1 }
+{
+        "id": 1,
+        "name": "Wolf",
+        "health": 10,
+        "max_health": 10,
+        "type": "beast",
+        "d6_actions": {
+                "1": { "name": "Snap", "type": "aggressive", "damage": 1, "damage_type": "piercing", "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+                "2": { "name": "Snap", "type": "aggressive", "damage": 1, "damage_type": "piercing", "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+                "3": { "name": "Howl", "type": "support", "damage": 0, "damage_type": "none", "effect_name": "fear", "effect_chance": 0.2, "effect_duration": 1, "effect_value": null, "effect_damage": 0 },
+                "4": { "name": "Bite", "type": "aggressive", "damage": 1, "damage_type": "piercing", "effect_name": "bleed", "effect_chance": 0.3, "effect_duration": 2, "effect_value": null, "effect_damage": 1 },
+                "5": { "name": "Lunge", "type": "aggressive", "damage": 3, "damage_type": "piercing", "effect_name": null, "effect_chance": null, "effect_duration": null, "effect_value": null, "effect_damage": 0 },
+                "6": { "name": "Frenzy", "type": "aggressive", "damage": 4, "damage_type": "slashing", "effect_name": "knockdown", "effect_chance": 1.0, "effect_duration": 1, "effect_value": null, "effect_damage": 0 }
+        },
+        "defense": {
+                "armor": 1,
+                "dodge_chance": 0.1,
+                "resistance": {
+                        "bludgeoning": 0,
+                        "piercing": 0,
+                        "slashing": 0,
+                        "fire": 0,
+                        "cold": 0,
+                        "lightning": 0,
+                        "thunder": 0,
+                        "acid": 0,
+                        "poison": 0,
+                        "necrotic": 0,
+                        "radiant": 0,
+                        "psychic": 0,
+                        "force": 0
+                },
+                "resistance_conditions": {
+                        "blinded": 0,
+                        "charmed": 0,
+                        "deafened": 0,
+                        "frightened": 0,
+                        "grappled": 0,
+                        "incapacitated": 0,
+                        "invisible": 0,
+                        "paralyzed": 0,
+                        "petrified": 0,
+                        "poisoned": 0,
+                        "prone": 0,
+                        "restrained": 0,
+                        "stunned": 0,
+                        "unconscious": 0
+                }
+        }
+
   },
   {
       "id": 2,

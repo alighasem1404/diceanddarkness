@@ -118,7 +118,78 @@ document.getElementById("roll-button").addEventListener("click", () => {
         `${enemyAbility.name}` + `<br>` +
         `${enemyAbility.damage} ${enemyAbility.damage_type} damage` + `<br>` +
         `${formatEffect(enemyAbility.effect_name)}`;
+
+    // Apply damage and handle end-of-turn logic
+    endTurnDamageApplication(playerAbility, enemyAbility);
 });
+
+// Function to apply damage considering resistances
+function applyDamage(attacker, defender, damage, damageType) {
+    if (!defender || !damage || !damageType) {
+        console.error('Invalid parameters for applying damage!');
+        return;
+    }
+
+    // Calculate resistance based on damage type
+    const resistance = defender.resistances?.[damageType] || 0;
+    const effectiveDamage = Math.max(damage * (1 - resistance), 0); // Adjust damage based on resistance
+
+    // Apply the damage to the defender's health
+    defender.health = Math.max(defender.health - effectiveDamage, 0); // Ensure health is not negative
+
+    console.log(`${attacker.name} dealt ${effectiveDamage.toFixed(2)} ${damageType} damage to ${defender.name}.`);
+    console.log(`${defender.name}'s remaining health: ${defender.health}`);
+}
+
+// Function to handle end-of-turn damage application
+function endTurnDamageApplication(playerAbility, enemyAbility) {
+    if (!playerAbility || !enemyAbility) {
+        console.error('Abilities are missing for damage application!');
+        return;
+    }
+
+    // Apply damage from player to enemy
+    applyDamage(playerData, currentEnemy, playerAbility.damage, playerAbility.damage_type);
+
+    // Apply damage from enemy to player
+    applyDamage(currentEnemy, playerData, enemyAbility.damage, enemyAbility.damage_type);
+
+    // Update the UI after applying damage
+    updatePlayerUI();
+    updateEnemyUI();
+
+    // Check for end of combat
+    if (playerData.health <= 0) {
+        console.log('Player has been defeated!');
+        alert('Game Over! The player has been defeated.');
+    } else if (currentEnemy.health <= 0) {
+        console.log(`${currentEnemy.name} has been defeated!`);
+        alert(`${currentEnemy.name} has been defeated!`);
+    }
+}
 
 // Load character data on page load
 loadCharacterData();
+
+// Function to reset the battle
+function resetBattle() {
+    // Reset turn counter
+    currentTurn = 1;
+    document.getElementById("turnConuter").textContent = currentTurn;
+
+    // Reload player and enemy data
+    loadCharacterData();
+
+    // Clear UI elements for dice and abilities
+    document.getElementById("player-dice").innerHTML = "";
+    document.getElementById("enemy-dice").innerHTML = "";
+
+    console.log("Battle has been reset.");
+}
+
+// Add event listener to reset button
+document.getElementById("reset-button").addEventListener("click", resetBattle);
+
+
+
+
