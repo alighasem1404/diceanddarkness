@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game UI Wireframe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="sidebar">
+            <div class="time-section">
+                <button class="next-btn" id="nextPhaseButton">Next</button>
+
+                <p id="timeDisplay" class="timeDisplay"></p>
+                <img src="assets\images\profile.jpg" alt="Profile Image" class="profile-image">
+                
+            </div>
+            <div class="resource-section">
+                
+                <p>Resource & Inventory</p>
+
+            <div class="essentialResource">    
+                <p id="goldAmount">Gold: 0</p> <!-- New element to show gold amount -->
+                <p id="reputationAmount">Reputation: 0</p> <!-- New element to show reputation amount -->
+                <p id="magicPointsAmount">magicPoints: 0</p> <!-- New element to show magicPoints amount -->
+                <p id="entertainmentAmount"></p>
+                
+            </div>
+            <hr>
+            <div class="hybridResource">
+                <p id="foodAmount"></p>
+                <p id="waterAmount"></p>
+                <p id="clothingAmount"></p>
+                <p id="weaponAmount"></p>
+            </div>
+            </div>
+            <div class="review-section">
+                <p>Short Review</p>
+                <p>Quests</p>
+                <p>Events</p>
+                <p>Notification</p>
+                <p>?</p>
+            </div>
+            <div class="settings-section">
+                <p>Settings</p>
+                <p>Save</p>
+            </div>
+        </div>
+        
+            
+    <!-- Main Map View (75% width) -->
+    <div class="main-view" id="grid-container-wrapper">
+
+        <div class="arrow arrow-up"></div>
+        <div class="arrow arrow-right"></div>
+        <div class="arrow arrow-down"></div>
+        <div class="arrow arrow-left"></div>
+        <div id="grid-container"></div>
+
+    
+
+
+    </div>
+        
+    </div>
+
+    <!-- Load main.js as the entry point -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

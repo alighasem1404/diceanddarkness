@@ -1,34 +1,122 @@
+/* === Global Styles === */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: black;
+    color: cyan;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.container {
-    text-align: center;
-    width: 100%;
-    max-width: 960px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #1e1e1e;
-    border-radius: 10px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+hr {
+    width: 100%;
+    border-color: inherit !important;
+    margin: 2%;
+}
+
+/* === Layout Containers === */
+.container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    width: 100%;
+    height: 100%;
+    border: 2px solid cyan;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid cyan;
+    justify-content: flex-start;
+    border-color: inherit !important;
+}
+
+.main-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    flex-grow: 1;
+}
+
+/* === Header and Footer === */
 .header h1 {
     margin: 0;
     font-size: 2rem;
     color: #ff6f61;
 }
 
-.main {
-    color: #ffffff;
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
 }
 
+/* === Buttons === */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff3b2f;
+}
+
+.next-btn {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -12px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .15s;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.next-btn:hover {
+    background-color: #FFC229;
+    box-shadow: #FF6314 0 -6px 8px inset;
+    transform: scale(1.125);
+}
+
+.next-btn:active {
+    transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+    .next-btn {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+}
+
+/* === Game Area === */
 .game-area {
     display: flex;
     justify-content: space-between;
@@ -45,7 +133,7 @@ body {
 }
 
 .character-img {
-        width: 100%;
+    width: 100%;
     max-width: 512px;
     height: auto;
     max-height: 768px;
@@ -74,29 +162,7 @@ body {
 
 .dice-result-img {
     width: 96px; /* Adjust size as needed */
-    
     object-fit: contain;
-}
-
-.btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #ffffff;
-    background-color: #ff6f61;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #ff3b2f;
-}
-
-.footer {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #aaaaaa;
 }
 
 .turnConuter {
@@ -110,3 +176,217 @@ body {
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* === Seasons === */
+.spring {
+    border-color: #14ff27 !important;
+}
+
+.summer {
+    border-color: #FFC229 !important;
+}
+
+.autumn {
+    border-color: #FF6314 !important;
+}
+
+.winter {
+    border-color: #29ffe2 !important;
+}
+
+.time-section, .resource-section, .review-section, .settings-section {
+    border-bottom: 2px solid;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-color: inherit !important;
+}
+
+.time-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ensure items stack properly */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.resource-section {
+    height: 20%;
+    justify-content: flex-start;
+}
+
+.review-section {
+    height: 50%;
+    justify-content: flex-start;
+}
+
+.settings-section {
+    height: 10%;
+}
+
+.timeDisplay {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+}
+
+.timeDisplay img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    filter: invert(100%);
+}
+
+.sessionText, .phaseText {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.hybridResource, .essentialResource {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 256px; /* Ensure it doesn't exceed the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+}
+
+/* === Grid Container === */
+body {
+    background-color: black; /* Set the background to black */
+    color: cyan; /* Default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+#grid-container {
+    width: auto; /* Adjust width dynamically based on content */
+    height: auto; /* Adjust height dynamically based on content */
+    display: grid; /* Enable grid layout */
+    border: 1px solid #a0a0a0; /* Optional: Border around the grid */
+   
+    margin: auto; /* Center the grid horizontally and vertically */
+}
+
+.grid-cell {
+    border: 1px solid #7e7d7d; /* White border for each cell */
+    background-color: black; /* Black background for cells */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Prevent images from blocking clicks */
+}
+
+
+/* Center the grid and arrows */
+#grid-container-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+/* Grid container */
+#grid-container {
+    display: grid;
+    border: 1px solid #a0a0a0;
+    grid-template-rows: repeat(7, 128px);
+    grid-template-columns: repeat(11, 128px);
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    cursor: pointer;
+}
+
+/* Up arrow (pointing outward) */
+.arrow-up {
+    bottom: 10%; /* Move above the grid */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 15px 10px 0 10px;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Right arrow (pointing outward) */
+.arrow-right {
+    left: 90%; /* Move to the right of the grid */
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #fff;
+}
+
+/* Down arrow (pointing outward) */
+.arrow-down {
+    top: 10%; /* Move below the grid */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 10px 15px 10px;
+    border-color: transparent transparent #fff transparent;
+}
+
+/* Left arrow (pointing outward) */
+.arrow-left {
+    right: 90%; /* Move to the left of the grid */
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+/* === Test === */
+/*#game-container {
+    display: flex;
+    height: 100vh;
+}
+
+#left-menu {
+    width: 25%;
+    background: #2c3e50;
+    color: white;
+    transition: width 0.3s;
+}
+
+#left-menu.collapsed {
+    width: 50px;
+}
+
+.map-slot {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px dashed rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+.building {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px;
+    text-align: center;
+}*/
