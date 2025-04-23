@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice and Darkness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Dice and Darkness</h1>
+        </header>
+        <main class="main">
+            <p class="turnConuter" id="turnConuter">1</p>
+
+            <div class="game-area">
+                <div class="character player">
+                    <!-- Player Box for displaying player details -->
+                    <div id="player-box" class="player-box">
+                        Player details will appear here.
+                    </div>
+                    <img src="assets/images/player.jpg" alt="Player Character" class="character-img">
+                    
+                    <div class="dice-result">
+                        <p class="dice" id="player-dice">?</p>
+                        <img src="assets/images/Layer 1.png" alt="Dice Result" id="player-dice-result-img" class="dice-result-img">
+                    </div>
+                </div>
+                <div class="character enemy">
+                    <!-- Enemy Box for displaying enemy details -->
+                    <div id="enemy-box" class="enemy-box">
+                        Enemy details will appear here.
+                    </div>
+                    <img src="assets/images/wolf.jpg" alt="Enemy Character" class="character-img">
+                 
+                    <div class="dice-result">
+                        <p class="dice" id="enemy-dice">?</p>
+                        <img src="assets/images/Layer 2.png" alt="Dice Result" id="enemy-dice-result-img" class="dice-result-img">
+                    </div>
+                </div>
+            </div>
+            <button class="btn" id="roll-button">Roll Dice</button>
+            <!-- Reset Button -->
+            <button class="btn reset-btn" id="reset-button" style="position: absolute; top: 10px; right: 10px;">Reset</button>
+        </main>
+    </div>
+    <script src="js\systems\combat.js"></script>
+</body>
+</html>
